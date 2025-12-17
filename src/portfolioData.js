@@ -20,7 +20,7 @@ export const portfolioData = {
     {
       role: "Research Assistant",
       company: "Dr. Norzariyah Binti Yahya, IIUM",
-      date: "August 2025 – Present",
+      date: "August 2025 - Present",
       description: "Working on 'Integrating Blockchain and AI for Halal Supply Chain Compliance'.",
       achievements: [
         "Conducted literature searches and data extraction from Scopus, IEEE, and ScienceDirect.",
@@ -31,7 +31,7 @@ export const portfolioData = {
     {
       role: "Digital & Technical Assistant",
       company: "Magna IBN Sdn. Bhd.",
-      date: "August 2025 – Present",
+      date: "August 2025 - Present",
       description: "Leading digital transformation initiatives for a consultancy firm.",
       achievements: [
         "Enhanced digital presence by optimizing website SEO, improving client engagement by 25%.",
@@ -59,25 +59,25 @@ export const portfolioData = {
     {
       role: "Program Coordinator",
       organization: "Innovatex: Innovative Tech Expo IIUM",
-      date: "March 2024",
+      date: "March 2024 - April 2024",
       description: "Coordinated the planning and execution of IIUM’s annual technology innovation exhibition, involving student startups and research showcases."
     },
     {
       role: "Program Coordinator",
       organization: "STUFF Mass Gathering 2.0 (Student Front Facilitating Club)",
-      date: "October 2023",
+      date: "October 2023 - November 2023",
       description: "Led the coordination of the club’s annual mass gathering event to introduce new committees and celebrate incoming members."
     },
     {
       role: "Committee (Legal Affairs Team)",
       organization: "I-Hax 2024: Innovation Hackathon IIUM",
-      date: "November 2024",
+      date: "November 2024 - December 2024",
       description: "Managed legal documentation and ensured that all hackathon activities complied with university regulations and ethical standards."
     },
     {
       role: "Participant",
       organization: "Kursus Kepimpinan PERKASA Pembimbing Rakan Sebaya (PRS), IIUM",
-      date: "April 2023",
+      date: "April 2023 - May 2023",
       description: "Completed a university-level leadership training program focused on peer mentoring, communication, and team empowerment."
     },
     {
@@ -91,35 +91,35 @@ export const portfolioData = {
     {
       name: "CompTIA Data+",
       issuer: "CompTIA",
-      date: "Nov 2025"
+      date: "Nov 2025 - Dec 2025"
     },
     {
       name: "AI for Business (eUM10)",
       issuer: "Malaysia Digital Economy Corporation (MDEC)",
-      date: "Dec 2024"
+      date: "Dec 2024 - Jan 2025"
     },
     {
       name: "Java Fundamentals Certification",
       issuer: "Oracle Academy",
-      date: "Dec 2023"
+      date: "Dec 2023 - Jan 2024"
     },
     {
       name: "Cisco Networking Academy",
       issuer: "Cisco",
-      date: "Jun 2023"
+      date: "Jun 2023 - Jul 2023"
     },
     {
       name: "Mandarin Language (Level 1 & Level 2)",
       issuer: "Language Proficiency",
-      date: "Completed"
+      date: "Completed - Dec 2023"
     },
     {
       name: "Bursa Investment Quiz",
       issuer: "National Level",
-      date: "Participant"
+      date: "Participant - Dec 2023"
     }
   ]
-  
+
   // ... existing projects ...
 
 
