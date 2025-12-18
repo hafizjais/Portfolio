@@ -6,6 +6,7 @@ export const portfolioData = {
     bio: "Final-year Computer Science (Data Science) student with experience in AI research, machine learning projects, and digital technology development. Previously involved in blockchain-AI research and industry-based web/digital solution work. Eager to join a team as a Data Science, AI/ML, or Analyst intern between March - September 2026.",
     email: "hafizjais5@gmail.com",
     phone: "+60 13-896 8430",
+    linkedin: "https://www.linkedin.com/in/hafiz-jais-306132213",
     location: "Kuala Lumpur, Malaysia"
   },
   education: [

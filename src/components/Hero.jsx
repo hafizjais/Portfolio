@@ -67,10 +67,11 @@ const Hero = () => {
           {/* Socials & CTA */}
           <motion.div variants={item} className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
             <a
-              href="#projects"
+              href="/cv.pdf"
+              download="Mohamad_Hafiz_CV.pdf"
               className="px-8 py-3 bg-teal-500 text-slate-900 font-bold uppercase tracking-widest hover:bg-teal-400 transition-colors rounded-sm flex items-center gap-2 group"
             >
-              View Work
+              View CV
               <ArrowDownRight className="group-hover:rotate-45 transition-transform duration-300" size={20} />
             </a>
 
@@ -80,7 +81,7 @@ const Hero = () => {
                 <Mail size={20} />
               </a>
               {/* Add other socials if available in data, assuming standard placeholder for now */}
-              <a href="#" className="p-2 text-slate-400 hover:text-teal-400 transition-colors border border-slate-700 hover:border-teal-500 rounded-full">
+              <a href={portfolioData.personal.linkedin} target="_blank" rel="noopener noreferrer" className="p-2 text-slate-400 hover:text-teal-400 transition-colors border border-slate-700 hover:border-teal-500 rounded-full">
                 <Linkedin size={20} />
               </a>
             </div>

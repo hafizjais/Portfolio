@@ -33,7 +33,9 @@ const Contact = () => (
 
         <motion.a
           whileHover={{ y: -5 }}
-          href="#"
+          href={portfolioData.personal.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
           className="p-8 bg-white rounded-2xl shadow-sm border border-slate-200 hover:border-teal-200 hover:shadow-lg transition-all group"
         >
           <div className="w-12 h-12 mx-auto bg-teal-50 rounded-full flex items-center justify-center text-teal-600 group-hover:bg-teal-500 group-hover:text-white transition-colors mb-4">
