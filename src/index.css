@@ -2,31 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 html {
   scroll-behavior: smooth;
-  background-color: #0a0a0a;
-  /* Dark background */
-  color: #ffffff;
-  /* Default white text */
+  @apply bg-slate-950 text-slate-100;
+  /* Now controllable via tailwind.config.js */
 }
 
-/* Custom Scrollbar to match the dark theme */
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  @apply bg-slate-950;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+  @apply bg-slate-700;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ccff00;
-  /* Neon hover */
+  @apply bg-sky-500;
 }

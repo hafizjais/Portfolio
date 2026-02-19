@@ -7,43 +7,42 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['Croissant One', 'cursive'], // Keeping user's choice
+        heading: ['Outfit', 'sans-serif'], // User likes clean font
         body: ['Outfit', 'sans-serif'],
         sans: ['Outfit', 'sans-serif'],
       },
       colors: {
-        // Mapping "Golden Taupe" palette to existing structure to prevent breakage
-        // Palette: Gold #D4AF37, Taupe #BDB76B, Cream #FDFBD4, Bronze #CE8946
+        // "Cool and Collected" Theme
+        // Palette: Deepest Teal #003135, Dark Teal #024950, Burnt Orange #964734, Bright Teal #0FA4AF, Light Blue #AFDDE5
 
         'slate': {
-          50: '#FDFBD4', // Cream (Lightest)
-          100: '#F7F5CC',
-          200: '#EBE9C0',
-          300: '#DMDAB0',
-          400: '#CE8946', // Bronze (Medium)
-          500: '#BDB76B', // Taupe
-          600: '#8A824B', // Darker Taupe
-          700: '#5C5432',
-          800: '#2E2A19', // Very Dark Taupe
-          900: '#1F1C11', // Almost Black/Gold
-          950: '#12100A', // Deepest Background
+          50: '#003135',  // Text (Darkest Teal)
+          100: '#024950', // Headings
+          200: '#065d66',
+          300: '#0a717d',
+          400: '#0e8693',
+          500: '#0FA4AF', // Bright Teal (Borders/Secondary)
+          600: '#3fcfd9',
+          700: '#7adce3',
+          800: '#bcebf0', // Card BG (Very Light Teal)
+          900: '#d7f3f6', // Secondary BG
+          950: '#AFDDE5', // Main BG (Light Sky Blue)
         },
         'sky': {
-          50: '#FBF8E0',
-          100: '#F5EEC1',
-          200: '#ECDFA0',
-          300: '#E3CF7E',
-          400: '#DBC060',
-          500: '#D4AF37', // Gold (Primary Accent)
-          600: '#AA8C2C',
-          700: '#806921',
-          800: '#554616',
-          900: '#2B230B',
-          950: '#151105',
+          50: '#26120d',
+          100: '#4d241a',
+          200: '#733527',
+          300: '#964734', // Burnt Orange
+          400: '#bf5b43',
+          500: '#964734', // Primary Accent (Orange) - High Contrast on Blue
+          600: '#d97b62',
+          700: '#eead9a',
+          800: '#f5d6cd',
+          900: '#faebe6',
+          950: '#ffffff',
         },
-        'accent': '#D4AF37', // Gold
-        'dark-bg': '#0a0a0a',   // Preserving user's custom keys
-        'teal-accent': '#14b8a6'
+        'accent': '#964734', // Burnt Orange
+        'dark-bg': '#AFDDE5', // Light Blue BG
       }
     },
   },
