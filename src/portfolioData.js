@@ -1,7 +1,7 @@
 export const portfolioData = {
   hero: {
-    name: "Mohamad Hafiz Jais",
-    headline: "Mohamad Hafiz Jais",
+    name: "Mohamad Hafiz Bin Mohd Jais",
+    headline: "Mohamad Hafiz Bin Mohd Jais",
     tagline: "IIUM Final year student | Data Analyst Intern | seeking for internship (March - September 2026)",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
