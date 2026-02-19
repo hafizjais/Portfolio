@@ -2,7 +2,7 @@ export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Bin Mohd Jais",
     headline: "Mohamad Hafiz Bin Mohd Jais",
-    tagline: "IIUM Final year student | Data Analyst Intern | seeking for internship (March - September 2026)",
+    tagline: "IIUM Final year student | Data Analyst Intern | Seeking for internship (March - September 2026)",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213", // Placeholder, user to update
@@ -27,7 +27,7 @@ export const portfolioData = {
         degree: "Sijil Pelajaran Malaysia (SPM)",
         institution: "Sekolah Menengah Kebangsaan Buloh Kasap",
         year: "2016 - 2020",
-        cwa: "7A 2B+",
+        cwa: "7A 4B+",
       }
     ],
   },
@@ -55,7 +55,7 @@ export const portfolioData = {
   ],
   projects: [
     {
-      title: "DIAGNOCHAIN – AI-Powered Disease Prediction System",
+      title: "DIAGNOCHAIN: AI-Powered Disease Prediction System",
       subtitle: "Final Year Project",
       description: "Developed supervised machine learning model for disease classification and integrated AI prediction system with blockchain-based secure medical database.",
       tech: ["Python", "Scikit-learn", "Firebase", "ReactJS", "Solidity"],
@@ -86,17 +86,37 @@ export const portfolioData = {
       name: "CompTIA Data+",
       issuer: "CompTIA",
       year: "2025",
+      link: "/CompTIA_Data_Plus.pdf",
+      image: "/CompTIA_Data_Plus.jpg",
     },
     {
       name: "Oracle Java Fundamentals",
       issuer: "Oracle",
       year: "2024",
+      link: "/clmsCertificate.pdf",
+      image: "/clmsCertificate.jpg",
     },
     {
       name: "AI for Business",
       issuer: "MDEC",
       year: "2025",
+      link: "/Certificate MDEC.pdf",
+      image: "/Certificate MDEC.jpg",
     },
+    {
+      name: "Introduction to Python",
+      issuer: "FreeCodeCamp",
+      year: "2024",
+      link: "/Python certificate.pdf",
+      image: "/Python certificate.jpg",
+    },
+    {
+      name: "Bursa Investment Quiz",
+      issuer: "Bursa Malaysia",
+      year: "2023",
+      link: "/Bursa Investment Quiz 2023.pdf",
+      image: "/Bursa Investment Quiz 2023.jpg",
+    }
   ],
   achievements: [
     "Silver Award – IIIDeation 2026 International Innovation Expo",
