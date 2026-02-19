@@ -1,9 +1,9 @@
 export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Jais",
-    headline: "Transforming Data into Actionable Intelligence",
-    tagline: "Data Science Undergraduate | Machine Learning | Process Improvement",
-    location: "Johor, Malaysia",
+    headline: "Mohamad Hafiz Jais",
+    tagline: "IIUM Final year student | Data Analyst Intern | seeking for internship (March - September 2026)",
+    location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213", // Placeholder, user to update
     github: "https://github.com/peacejez", // Placeholder, user to update

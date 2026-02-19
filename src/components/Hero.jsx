@@ -6,24 +6,24 @@ const Hero = () => {
   const { hero } = portfolioData;
 
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[80vh] px-6 md:px-0 gap-12">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[70vh] px-6 md:px-0 gap-8 md:gap-12">
 
       {/* Text Content */}
-      <div className="flex-1 flex flex-col items-start">
+      <div className="flex-1 flex flex-col items-start text-left">
         <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-sky-400 font-medium tracking-wider mb-4 block"
+          className="text-sky-400 font-medium tracking-wider mb-2 block"
         >
-          Hello, I'm {hero.name}
+          Hello, I'm
         </motion.span>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="text-4xl md:text-6xl lg:text-7xl font-bold text-slate-100 mb-6 leading-tight"
+          className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-100 mb-4 leading-tight"
         >
           {hero.headline}
         </motion.h1>
@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-slate-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
+          className="text-slate-400 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed"
         >
           {hero.tagline}
           <br />
@@ -43,13 +43,15 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="flex gap-4"
+          className="flex flex-wrap gap-4"
         >
           <a
-            href="#projects"
+            href="/CV_Hafiz.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3 bg-sky-500 text-white font-medium rounded hover:bg-sky-600 transition-colors"
           >
-            View Projects
+            View my CV
           </a>
           <a
             href="#contact"
@@ -65,9 +67,9 @@ const Hero = () => {
         initial={{ opacity: 0, x: 20 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: 0.4 }}
-        className="flex-1 flex justify-center md:justify-end"
+        className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0"
       >
-        <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
           {/* Decorative Ring */}
           <div className="absolute inset-0 border-2 border-dashed border-sky-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
 
