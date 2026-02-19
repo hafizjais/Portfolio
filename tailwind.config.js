@@ -5,16 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      fontFamily: {
-        heading: ['Croissant One', 'cursive'],
-        body: ['Outfit', 'sans-serif'],
-        sans: ['Outfit', 'sans-serif'],
+    fontFamily: {
+      heading: ['Outfit', 'sans-serif'],
+      body: ['Outfit', 'sans-serif'],
+      sans: ['Outfit', 'sans-serif'],
+    },
+    colors: {
+      'slate': {
+        850: '#1e293b',
+        900: '#0f172a',
+        950: '#020617',
       },
-      colors: {
-        'dark-bg': '#0a0a0a',
-        'teal-accent': '#14b8a6', // teal-500 equivalent
-      }
+      'accent': '#0ea5e9', // sky-500
     },
   },
   plugins: [],

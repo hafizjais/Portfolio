@@ -2,56 +2,54 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Section from './components/Section';
 import Hero from './components/Hero';
-import Experience from './components/Experience';
-import Leadership from './components/Leadership';
+import About from './components/About';
 import Skills from './components/Skills';
-import Certifications from './components/Certifications';
+import Experience from './components/Experience';
 import Projects from './components/Projects';
+import Certifications from './components/Certifications';
+import Achievements from './components/Achievements';
 import Contact from './components/Contact';
 
 function App() {
   return (
-    <div className="bg-slate-50 min-h-screen font-body text-slate-900 selection:bg-teal-500/30 selection:text-teal-900">
+    <div className="bg-slate-950 min-h-screen font-body text-slate-300 selection:bg-sky-500/30 selection:text-sky-200">
       <Navbar />
 
-      {/* Hero - Impact Section (Dark) */}
-      <Section id="hero" variant="dark" className="pt-0 pb-0">
+      <Section id="hero" variant="dark" className="pt-32 pb-0">
         <Hero />
       </Section>
 
-      {/* Experience - Clean (Light) */}
-      <Section id="experience" variant="light">
-        <Experience />
+      <Section id="about" variant="light">
+        <About />
       </Section>
 
-      {/* Skills - Impact Section (Dark) */}
       <Section id="skills" variant="dark">
         <Skills />
       </Section>
 
-      {/* Projects - Clean (Light) */}
-      <Section id="projects" variant="light">
+      <Section id="experience" variant="light">
+        <Experience />
+      </Section>
+
+      <Section id="projects" variant="dark">
         <Projects />
       </Section>
 
-      {/* Leadership & Certifications - Clean (Light) */}
-      <Section id="leadership" variant="light" className="bg-slate-100">
-        <Leadership />
-      </Section>
-
       <Section id="certifications" variant="light">
-        <Certifications />
+        <div className="grid lg:grid-cols-3 gap-12">
+          <div className="lg:col-span-2">
+            <Certifications />
+          </div>
+          <div className="lg:col-span-1">
+            <Achievements />
+          </div>
+        </div>
       </Section>
 
-      {/* Contact - Clean (Light) */}
-      <Section id="contact" variant="light">
+      <Section id="contact" variant="dark">
         <Contact />
       </Section>
 
-      {/* Footer */}
-      <footer className="bg-slate-950 text-slate-400 py-8 text-center font-body text-sm border-t border-slate-800">
-        <p>&copy; {new Date().getFullYear()} Mohamad Hafiz. Built with React & Tailwind.</p>
-      </footer>
     </div>
   );
 }

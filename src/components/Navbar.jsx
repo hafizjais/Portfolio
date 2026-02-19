@@ -17,16 +17,15 @@ const Navbar = () => {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Certifications', href: '#certifications' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Contactz', href: '#contact' },
+    { name: 'Certifications', href: '#certifications' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-dark-bg/90 backdrop-blur-md border-b border-teal-500/10 py-4 shadow-lg'
+        ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-700 py-4 shadow-lg'
         : 'bg-transparent py-6'
         }`}
     >
@@ -35,7 +34,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <a href="#" className="font-heading text-2xl md:text-3xl font-bold text-white tracking-wide">
-            M<span className="text-teal-500">H</span>.
+            Hafiz<span className="text-sky-500">Jais</span>.
           </a>
 
           {/* Desktop Links */}
@@ -44,17 +43,17 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="font-body text-sm font-medium text-slate-300 hover:text-teal-400 uppercase tracking-widest transition-colors relative group"
+                className="font-body text-sm font-medium text-slate-300 hover:text-sky-400 uppercase tracking-widest transition-colors relative group"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-teal-500 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-teal-500 hover:text-teal-400 transition-colors">
+            <button onClick={() => setIsOpen(!isOpen)} className="text-sky-500 hover:text-sky-400 transition-colors">
               {isOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
@@ -68,14 +67,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-b border-teal-500/20 md:hidden p-6"
+            className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-b border-slate-700 md:hidden p-6"
           >
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className="font-heading text-xl text-slate-300 hover:text-teal-400 transition-colors"
+                  className="font-heading text-xl text-slate-300 hover:text-sky-400 transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
