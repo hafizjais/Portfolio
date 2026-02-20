@@ -119,9 +119,27 @@ export const portfolioData = {
     }
   ],
   achievements: [
-    "Silver Award – IIIDeation 2026 International Innovation Expo",
-    "Dean’s List (3 semesters)",
-    "Bronze Award – University in Action Symposium",
+    {
+      title: "Silver Award",
+      award: "IIIDeation 2026 International Innovation Expo",
+      year: "2026",
+      images: ["/FYP 2 poster.png", "/FYP Judges Evaluation.jpg", "/FYP Booth.jpg"],
+      link: "/IGIIDEATION Silver Award.pdf",
+    },
+    {
+      title: "Dean’s List",
+      award: "Awarded for 3 Semesters",
+      year: "2024-2025",
+      images: ["/Dean list award 3.jpg", "/Dean list award 2.jpg", "/Dean list award 1.jpg"],
+      link: "/Dean list award 3.pdf",
+    },
+    {
+      title: "Bronze Award",
+      award: "University in Action Symposium",
+      year: "2025",
+      images: ["/Poster Symposium.png", "/UIA Booth Visit.jpg", "/Silver Award - UIA Symposium.jpg"],
+      link: "/University in Action - Symposium.pdf"
+    },
   ],
   contact: {
     email: "hafizjais5@gmail.com",

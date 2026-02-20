@@ -41,18 +41,15 @@ function App() {
         <Projects />
       </Section>
 
-      <Section id="certifications" variant="light">
-        <div className="grid lg:grid-cols-3 gap-12">
-          <div className="lg:col-span-2">
-            <Certifications />
-          </div>
-          <div className="lg:col-span-1">
-            <Achievements />
-          </div>
-        </div>
+      <Section id="awards" variant="light">
+        <Achievements />
       </Section>
 
-      <Section id="contact" variant="dark">
+      <Section id="certifications" variant="dark">
+        <Certifications />
+      </Section>
+
+      <Section id="contact" variant="light">
         <Contact />
       </Section>
 
