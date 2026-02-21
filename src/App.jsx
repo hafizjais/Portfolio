@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
+import Leadership from './components/Leadership';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
 import Achievements from './components/Achievements';
@@ -37,19 +38,23 @@ function App() {
         <Experience />
       </Section>
 
-      <Section id="projects" variant="dark">
+      <Section id="leadership" variant="dark">
+        <Leadership />
+      </Section>
+
+      <Section id="projects" variant="light">
         <Projects />
       </Section>
 
-      <Section id="awards" variant="light">
+      <Section id="awards" variant="dark">
         <Achievements />
       </Section>
 
-      <Section id="certifications" variant="dark">
+      <Section id="certifications" variant="light">
         <Certifications />
       </Section>
 
-      <Section id="contact" variant="light">
+      <Section id="contact" variant="dark">
         <Contact />
       </Section>
 

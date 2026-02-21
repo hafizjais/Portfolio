@@ -14,7 +14,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="text-sky-400 font-medium tracking-wider mb-2 block"
+          className="text-sky-400 font-medium tracking-wider mb-2 block text-2xl pt-2"
         >
           Hello, I'm
         </motion.span>
