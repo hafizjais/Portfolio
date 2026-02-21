@@ -8,8 +8,8 @@ export const portfolioData = {
     tagline4: "Seeking for internship (March - September 2026)",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
-    linkedin: "https://linkedin.com/in/hafiz-jais-306132213", // Placeholder, user to update
-    github: "https://github.com/peacejez", // Placeholder, user to update
+    linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
+    github: "https://github.com/peacejez",
   },
   about: {
     bio: "I am a Data Science undergraduate with strong interest in data analytics, machine learning, and digital process improvement. I have hands-on experience in data cleaning, SQL querying, dashboard development, and building machine learning models using Python, Scikit-learn, Excel, Power BI, and Tableau. I enjoy transforming raw data into meaningful insights that support business decisions and operational efficiency. I am passionate about continuous learning and comfortable working in structured and fast-paced environments.",
@@ -47,7 +47,7 @@ export const portfolioData = {
       ],
     },
     {
-      role: "Research Assistant",
+      role: "Research Assistant - Under Dr Norzariyah Yahya",
       company: "International Islamic University Malaysia (IIUM)",
       date: "Aug - Dec 2025",
       description: [
@@ -186,7 +186,7 @@ export const portfolioData = {
       image: "/Python certificate.jpg",
     },
     {
-      name: "Bursa Investment Quiz",
+      name: "Bursa Investment Quiz (National)",
       issuer: "Bursa Malaysia",
       year: "2023",
       link: "/Bursa Investment Quiz 2023.pdf",
