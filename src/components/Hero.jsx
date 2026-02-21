@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { portfolioData } from '../portfolioData';
+import { GraduationCap, Award, BookOpen, Briefcase, MapPin } from 'lucide-react';
 
 const Hero = () => {
   const { hero } = portfolioData;
@@ -28,22 +29,37 @@ const Hero = () => {
           {hero.headline}
         </motion.h1>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-white text-lg md:text-xl max-w-2xl mb-8 leading-relaxed"
+          className="flex flex-col gap-4 mb-10"
         >
-          {hero.tagline}
-          <br />
-          {hero.tagline2}
-          <br />
-          {hero.tagline3}
-          <br />
-          {hero.tagline4}
-          <br />
-          Based in {hero.location}.
-        </motion.p>
+          <div className="flex items-center gap-3 text-white">
+            <GraduationCap className="text-amber-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl font-medium">{hero.tagline}</span>
+          </div>
+
+          <div className="flex items-center gap-3 text-white">
+            <Award className="text-amber-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl font-medium">{hero.tagline2}</span>
+          </div>
+
+          <div className="flex items-center gap-3 text-white">
+            <BookOpen className="text-amber-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl font-medium">{hero.tagline3}</span>
+          </div>
+
+          <div className="flex items-center gap-3 mt-2 px-4 py-3 bg-slate-900/60 backdrop-blur-sm rounded-xl border border-amber-500/30 w-fit shadow-lg">
+            <Briefcase className="text-amber-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl text-white font-semibold tracking-wide">{hero.tagline4}</span>
+          </div>
+
+          <div className="flex items-center gap-3 text-white mt-2">
+            <MapPin className="text-sky-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl font-medium">Based in {hero.location}</span>
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
