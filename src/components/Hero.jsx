@@ -77,7 +77,7 @@ const Hero = () => {
           </a>
           <a
             href="#contact"
-            className="px-8 py-3 bg-transparent border border-slate-700 text-slate-300 font-medium rounded hover:border-sky-500 hover:text-sky-400 transition-colors"
+            className="px-8 py-3 bg-sky-500 text-white font-medium rounded hover:bg-sky-600 transition-colors"
           >
             Contact Me
           </a>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../portfolioData';
-import { Mail, Linkedin, Facebook, MapPin } from 'lucide-react';
+import { Mail, MapPin, Github } from 'lucide-react';
 
 const Contact = () => {
   const { contact } = portfolioData;
@@ -39,6 +39,15 @@ const Contact = () => {
             className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-blue-500 hover:-translate-y-1 transition-all overflow-hidden p-2"
           >
             <img src="/facebook icon.png" alt="Facebook" className="w-full h-full object-contain" />
+          </a>
+
+          <a
+            href={contact.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-slate-400 hover:text-white text-slate-300 hover:-translate-y-1 transition-all overflow-hidden p-3"
+          >
+            <Github className="w-full h-full" />
           </a>
         </div>
       </div>

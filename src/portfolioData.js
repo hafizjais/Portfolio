@@ -220,6 +220,7 @@ export const portfolioData = {
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
     facebook: "https://www.facebook.com/peacejez/",
+    github: "https://github.com/peacejez",
     location: "Johor, Malaysia",
   },
 };
