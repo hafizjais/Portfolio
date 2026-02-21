@@ -12,7 +12,7 @@ export const portfolioData = {
     github: "https://github.com/peacejez",
   },
   about: {
-    bio: "I am a Data Science undergraduate with strong interest in data analytics, machine learning, and digital process improvement. I have hands-on experience in data cleaning, SQL querying, dashboard development, and building machine learning models using Python, Scikit-learn, Excel, Power BI, and Tableau. I enjoy transforming raw data into meaningful insights that support business decisions and operational efficiency. I am passionate about continuous learning and comfortable working in structured and fast-paced environments.",
+    bio: "I’m a Data Science undergraduate with a strong interest in data analytics and machine learning. I enjoy working with data, from cleaning and exploring it to building dashboards and simple machine learning models using tools like Python, SQL, Power BI and Tableau. What excites me most is turning messy data into clear insights that can actually help improve decisions and processes. I’m always eager to learn something new and I’m comfortable working in both structured and fast-paced environments.",
     education: [
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
@@ -22,7 +22,7 @@ export const portfolioData = {
       },
       {
         degree: "Foundation in Engineering and Computer Science",
-        institution: "International Islamic University Malaysia (IIUM)",
+        institution: "Centre for Foundation Studies (IIUM)",
         year: "2021 - 2022",
         cwa: "CGPA: 3.14",
       },
@@ -30,7 +30,7 @@ export const portfolioData = {
         degree: "Sijil Pelajaran Malaysia (SPM)",
         institution: "Sekolah Menengah Islam Hidayah Johor Bahru",
         year: "2016 - 2020",
-        cwa: "7A 4B+",
+        cwa: "8A 2B+ 1B",
       }
     ],
   },
