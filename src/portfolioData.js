@@ -2,7 +2,7 @@ export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Bin Mohd Jais",
     headline: "Mohamad Hafiz Bin Mohd Jais",
-    tagline: "IIUM Final year student",
+    tagline: "International Islamic University of Malaysia",
     tagline2: "Bachelor of Computer Science (Honours)",
     tagline3: "Data Science and Computer Intelligence",
     tagline4: "Seeking for internship (March - September 2026)",
@@ -12,25 +12,22 @@ export const portfolioData = {
     github: "https://github.com/peacejez",
   },
   about: {
-    bio: "I’m a Data Science undergraduate with a strong interest in data analytics and machine learning. I enjoy working with data, from cleaning and exploring it to building dashboards and simple machine learning models using tools like Python, SQL, Power BI and Tableau. What excites me most is turning messy data into clear insights that can actually help improve decisions and processes. I’m always eager to learn something new and I’m comfortable working in both structured and fast-paced environments.",
+    bio: "I’m a final year Computer Science student specialised in Data Science and Computer Intelligence with a strong interest in data analytics and machine learning. I enjoy working with data, from cleaning and exploring it to building dashboards and simple machine learning models using tools like Python, SQL, Power BI and Tableau. What excites me most is turning messy data into clear insights that can actually help improve decisions and processes. I’m always eager to learn something new and I’m comfortable working in both structured and fast-paced environments.",
     education: [
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
         institution: "International Islamic University Malaysia (IIUM)",
         year: "Expected Graduation: 2026", // Placeholder year
-        cwa: "CGPA: 3.40",
       },
       {
         degree: "Foundation in Engineering and Computer Science",
         institution: "Centre for Foundation Studies (IIUM)",
         year: "2021 - 2022",
-        cwa: "CGPA: 3.14",
       },
       {
         degree: "Sijil Pelajaran Malaysia (SPM)",
         institution: "Sekolah Menengah Islam Hidayah Johor Bahru",
         year: "2016 - 2020",
-        cwa: "8A 2B+ 1B",
       }
     ],
   },

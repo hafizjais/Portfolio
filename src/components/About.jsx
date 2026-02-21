@@ -31,7 +31,6 @@ const About = () => {
                             <p className="text-sky-400 font-medium">{edu.institution}</p>
                             <div className="flex justify-between items-center mt-2 text-sm text-slate-500 font-mono">
                                 <span>{edu.year}</span>
-                                <span>{edu.cwa}</span>
                             </div>
                         </div>
                     ))}
