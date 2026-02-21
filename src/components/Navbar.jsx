@@ -35,7 +35,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
 
           {/* Logo */}
-          <a href="#" className="font-heading text-2xl md:text-3xl font-bold text-white tracking-wide">
+          <a href="#" className="font-heading text-2xl md:text-3xl font-bold text-slate-100 mb-4 leading-tight">
             Hafiz<span className="text-sky-500">Jais</span>.
           </a>
 

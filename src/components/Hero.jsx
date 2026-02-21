@@ -32,7 +32,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="text-slate-400 text-lg md:text-xl max-w-2xl mb-8 leading-relaxed"
+          className="text-white text-lg md:text-xl max-w-2xl mb-8 leading-relaxed"
         >
           {hero.tagline}
           <br />
