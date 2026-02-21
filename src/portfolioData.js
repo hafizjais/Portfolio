@@ -155,6 +155,16 @@ export const portfolioData = {
     data: ["Excel", "Power BI", "Tableau", "Spark"],
     web: ["ReactJS", "WordPress", "HTML", "CSS", "Firebase"],
     tools: ["Git", "VS Code", "Microsoft 365"],
+    soft: [
+      "Analytical Thinking",
+      "Problem Solving",
+      "Clear Communication",
+      "Team Collaboration",
+      "Adaptability",
+      "Attention to Detail",
+      "Time Management",
+      "Continuous Learning"
+    ],
   },
   certifications: [
     {

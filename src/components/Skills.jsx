@@ -23,12 +23,24 @@ const Skills = () => {
   return (
     <div>
       <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Technical Skills</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <SkillCategory title="Programming" items={skills.programming} />
         <SkillCategory title="Machine Learning" items={skills.ml} />
         <SkillCategory title="Data Integration" items={skills.data} />
         <SkillCategory title="Web Development" items={skills.web} />
         <SkillCategory title="Tools & Platforms" items={skills.tools} />
+      </div>
+
+      <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Soft Skills</h2>
+      <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+        {skills.soft?.map((skill) => (
+          <span
+            key={skill}
+            className="px-6 py-3 bg-slate-800/50 text-slate-300 text-lg md:text-xl rounded-full border border-slate-700 hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default"
+          >
+            {skill}
+          </span>
+        ))}
       </div>
     </div>
   );
