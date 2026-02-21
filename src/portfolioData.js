@@ -17,7 +17,7 @@ export const portfolioData = {
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
         institution: "International Islamic University Malaysia (IIUM)",
-        year: "Expected Graduation: 2026", // Placeholder year
+        year: "2022 - 2026",
       },
       {
         degree: "Foundation in Engineering and Computer Science",
@@ -170,6 +170,13 @@ export const portfolioData = {
       year: "2025",
       link: "/CompTIA_Data_Plus.pdf",
       image: "/CompTIA_Data_Plus.jpg",
+    },
+    {
+      name: "Microsoft Excel Workshop 2023",
+      issuer: "CENSERVE IIUM",
+      year: "2023",
+      link: "/Excel Certificate.png",
+      image: "/Excel Certificate.png",
     },
     {
       name: "Oracle Java Fundamentals",

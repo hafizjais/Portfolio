@@ -5,7 +5,7 @@ const Skills = () => {
   const { skills } = portfolioData;
 
   const SkillCategory = ({ title, items }) => (
-    <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-sky-500/50 transition-colors">
+    <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-sky-500/50 transition-colors w-full md:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]">
       <h3 className="text-xl font-bold text-sky-400 mb-4">{title}</h3>
       <div className="flex flex-wrap gap-2">
         {items.map((skill) => (
@@ -23,7 +23,7 @@ const Skills = () => {
   return (
     <div>
       <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Technical Skills</h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div className="flex flex-wrap justify-center gap-6 mb-16">
         <SkillCategory title="Programming" items={skills.programming} />
         <SkillCategory title="Machine Learning" items={skills.ml} />
         <SkillCategory title="Data Integration" items={skills.data} />
