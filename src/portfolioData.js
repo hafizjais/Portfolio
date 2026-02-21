@@ -2,7 +2,10 @@ export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Bin Mohd Jais",
     headline: "Mohamad Hafiz Bin Mohd Jais",
-    tagline: "IIUM Final year student | Data Analyst Intern | Seeking for internship (March - September 2026)",
+    tagline: "IIUM Final year student",
+    tagline2: "Bachelor of Computer Science (Honours)",
+    tagline3: "Data Science and Computer Intelligence",
+    tagline4: "Seeking for internship (March - September 2026)",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213", // Placeholder, user to update
@@ -216,6 +219,7 @@ export const portfolioData = {
   contact: {
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
+    facebook: "https://www.facebook.com/peacejez/",
     location: "Johor, Malaysia",
   },
 };

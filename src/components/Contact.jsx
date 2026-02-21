@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../portfolioData';
-import { Mail, Linkedin, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Facebook, MapPin } from 'lucide-react';
 
 const Contact = () => {
   const { contact } = portfolioData;
@@ -22,15 +22,25 @@ const Contact = () => {
           Send Email
         </a>
 
-        <a
-          href={contact.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-3 px-8 py-4 bg-slate-800 text-slate-300 font-bold rounded-lg border border-slate-700 hover:border-sky-500 hover:text-sky-400 transition-all hover:-translate-y-1 w-full md:w-auto justify-center"
-        >
-          <Linkedin size={20} />
-          LinkedIn
-        </a>
+        <div className="flex gap-4">
+          <a
+            href={contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-sky-500 hover:-translate-y-1 transition-all overflow-hidden p-2"
+          >
+            <img src="/linkedin icon.png" alt="LinkedIn" className="w-full h-full object-contain" />
+          </a>
+
+          <a
+            href={contact.facebook}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-blue-500 hover:-translate-y-1 transition-all overflow-hidden p-2"
+          >
+            <img src="/facebook icon.png" alt="Facebook" className="w-full h-full object-contain" />
+          </a>
+        </div>
       </div>
 
       <div className="mt-16 pt-8 border-t border-slate-800 text-slate-500 text-sm flex flex-col items-center gap-2">

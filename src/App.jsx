@@ -30,35 +30,35 @@ function App() {
         <About />
       </Section>
 
-      <Section id="skills" variant="dark">
-        <Skills />
-      </Section>
-
-      <Section id="experience" variant="light">
+      <Section id="experience" variant="dark">
         <Experience />
       </Section>
 
-      <Section id="leadership" variant="dark">
+      <Section id="leadership" variant="light">
         <Leadership />
       </Section>
 
-      <Section id="projects" variant="light">
+      <Section id="projects" variant="dark">
         <Projects />
       </Section>
 
-      <Section id="awards" variant="dark">
+      <Section id="awards" variant="light">
         <Achievements />
       </Section>
 
-      <Section id="certifications" variant="light">
+      <Section id="certifications" variant="dark">
         <Certifications />
+      </Section>
+
+      <Section id="skills" variant="light">
+        <Skills />
       </Section>
 
       <Section id="contact" variant="dark">
         <Contact />
       </Section>
 
-    </div>
+    </div >
   );
 }
 

@@ -36,6 +36,12 @@ const Hero = () => {
         >
           {hero.tagline}
           <br />
+          {hero.tagline2}
+          <br />
+          {hero.tagline3}
+          <br />
+          {hero.tagline4}
+          <br />
           Based in {hero.location}.
         </motion.p>
 
