@@ -1,4 +1,4 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 
 const Section = ({
     children,
@@ -39,9 +39,15 @@ const Section = ({
                 </div>
             )}
 
-            <div className="relative max-w-7xl mx-auto z-10 text-slate-300">
+            <motion.div 
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-10%" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="relative max-w-7xl mx-auto z-10 text-slate-300"
+            >
                 {children}
-            </div>
+            </motion.div>
         </section>
     );
 };
