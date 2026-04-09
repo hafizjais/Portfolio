@@ -45,14 +45,9 @@ const Hero = () => {
             <span className="text-lg md:text-xl font-medium">{hero.tagline2}</span>
           </div>
 
-          <div className="flex items-center gap-3 text-white">
-            <BookOpen className="text-amber-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl font-medium">{hero.tagline3}</span>
-          </div>
-
-          <div className="flex items-center gap-3 mt-2 px-4 py-3 bg-slate-900/60 backdrop-blur-sm rounded-xl border border-amber-500/30 w-fit shadow-lg">
-            <Briefcase className="text-amber-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl text-white font-semibold tracking-wide">{hero.tagline4}</span>
+          <div className="flex items-center gap-3 mt-2 px-4 py-3 bg-slate-900/60 backdrop-blur-sm rounded-xl border border-sky-500/30 w-full md:w-fit shadow-lg">
+            <Briefcase className="text-sky-400 shrink-0" size={24} />
+            <span className="text-lg md:text-xl text-white font-semibold tracking-wide leading-snug">{hero.tagline3}</span>
           </div>
 
           <div className="flex items-center gap-3 text-white mt-2">
@@ -65,7 +60,7 @@ const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="flex flex-wrap gap-4"
+          className="flex flex-wrap gap-4 mb-8 md:mb-12"
         >
           <a
             href="/CV_Hafiz.pdf"

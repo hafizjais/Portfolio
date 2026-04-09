@@ -4,17 +4,16 @@ export const portfolioData = {
     headline: "Mohamad Hafiz Bin Mohd Jais",
     tagline: "International Islamic University of Malaysia",
     tagline2: "Bachelor of Computer Science (Honours)",
-    tagline3: "Data Science and Computer Intelligence",
-    tagline4: "Seeking for internship (March - September 2026)",
+    tagline3: "Data Analytics Intern at Johor Corporation",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
     github: "https://github.com/peacejez",
   },
   about: {
-    bio: `As a Data Analytics Intern at Johor Corporation, I support project teams in improving cost transparency, decision‑making, and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows, and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
+    bio: `As a Data Analytics Intern at Johor Corporation, I support project teams in improving cost transparency, decision‑making and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
 
-I work closely with Project Management Consulting (PMC), Construction Management, and Finance, gaining hands‑on exposure to how real project cost data is structured, governed, and used for reporting and forecasting.`,
+I work closely with Project Management Consulting (PMC), Construction Management and Finance, gaining hands‑on exposure to how real project cost data is structured, governed and used for reporting and forecasting.`,
     education: [
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
@@ -174,6 +173,20 @@ I work closely with Project Management Consulting (PMC), Construction Management
       image: "/CompTIA_Data_Plus.jpg",
     },
     {
+      name: "Autodesk Construction Cloud - Cost Management",
+      issuer: "Autodesk",
+      year: "2026",
+      link: "/AutoDesk Construction Cloud.pdf",
+      image: "/AutoDesk Construction Cloud.jpg",
+    },
+    {
+      name: "Power BI Beginner to Pro Workshop",
+      issuer: "Pragmatic Works",
+      year: "2026",
+      link: "/Power BI Beginner to Pro Workshop - MOHAMAD HAFIZ BIN MOHD JAIS.pdf",
+      image: "Power BI Beginner to Pro Workshop - MOHAMAD HAFIZ BIN MOHD JAIS.jpg",
+    },
+    {
       name: "Microsoft Excel Workshop 2023",
       issuer: "CENSERVE IIUM",
       year: "2023",
@@ -207,6 +220,13 @@ I work closely with Project Management Consulting (PMC), Construction Management
       year: "2023",
       link: "/Bursa Investment Quiz 2023.pdf",
       image: "/Bursa Investment Quiz 2023.jpg",
+    },
+    {
+      name: "New Certificate (Placeholder)",
+      issuer: "Issuer Name",
+      year: "2026",
+      link: "",
+      image: "",
     }
   ],
   achievements: [
