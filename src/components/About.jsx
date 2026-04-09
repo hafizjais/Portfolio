@@ -12,7 +12,7 @@ const About = () => {
                     <span className="w-8 h-[2px] bg-sky-500"></span>
                     About Me
                 </h2>
-                <p className="text-slate-400 leading-relaxed text-lg mb-6 text-justify">
+                <p className="text-slate-400 leading-relaxed text-lg mb-6 text-justify whitespace-pre-line">
                     {about.bio}
                 </p>
             </div>

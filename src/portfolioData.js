@@ -12,7 +12,9 @@ export const portfolioData = {
     github: "https://github.com/peacejez",
   },
   about: {
-    bio: "I’m a final year Computer Science student specialised in Data Science and Computer Intelligence with a strong interest in data analytics and machine learning. I enjoy working with data, from cleaning and exploring it to building dashboards and simple machine learning models using tools like Python, SQL, Power BI and Tableau. What excites me most is turning messy data into clear insights that can actually help improve decisions and processes. I’m always eager to learn something new and I’m comfortable working in both structured and fast-paced environments.",
+    bio: `As a Data Analytics Intern at Johor Corporation, I support project teams in improving cost transparency, decision‑making, and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows, and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
+
+I work closely with Project Management Consulting (PMC), Construction Management, and Finance, gaining hands‑on exposure to how real project cost data is structured, governed, and used for reporting and forecasting.`,
     education: [
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
