@@ -2,7 +2,7 @@ export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Bin Mohd Jais",
     headline: "Mohamad Hafiz Bin Mohd Jais",
-    tagline: "International Islamic University of Malaysia",
+    tagline: "International Islamic University of Malaysia (IIUM Gombak)",
     tagline2: "Bachelor of Computer Science (Honours)",
     tagline3: "Data Analytics Intern at Johor Corporation",
     location: "Johor Bahru, Malaysia",
@@ -11,7 +11,7 @@ export const portfolioData = {
     github: "https://github.com/peacejez",
   },
   about: {
-    bio: `As a Data Analytics Intern at Johor Corporation, I support project teams in improving cost transparency, decision‑making and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
+    bio: `As a Data Analytics Intern at Johor Corporation, I support the PDP-HPM project in improving cost transparency, decision‑making and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
 
 I work closely with Project Management Consulting (PMC), Construction Management and Finance, gaining hands‑on exposure to how real project cost data is structured, governed and used for reporting and forecasting.`,
     education: [
@@ -148,13 +148,18 @@ I work closely with Project Management Consulting (PMC), Construction Management
     },
   ],
   skills: {
-    programming: ["Python", "SQL", "Java", "JavaScript"],
-    ml: ["Scikit-learn", "TensorFlow", "PyTorch"],
-    data: ["Excel", "Power BI", "Tableau", "Spark"],
-    web: ["ReactJS", "WordPress", "HTML", "CSS", "Firebase"],
-    tools: ["Git", "VS Code", "Microsoft 365"],
+    data: ["Excel", "Power BI", "Data Silo Remediation", "Power Query", "EdgeProp"],
+    programming: ["DAX Measures for Power BI", "SQL", "Python", "ReactJS"],
+    ml: ["Predictive Analytics for Power BI", "Scikit-learn", "TensorFlow", "PyTorch"],
+    tools: ["Autodesk Construction Cloud", "Autodesk Forma", "Microsoft Power BI", "Microsoft Fabric", "Microsoft Dynamic 365", "Microsoft Sharepoint", "Git", "VS Code"],
+    specialized: [
+      "Construction & Project Cost Management Fundamentals",
+      "Cost Data Structure & Governance",
+      "ACC ↔ Finance (D365) Integration"
+    ],
     soft: [
       "Analytical Thinking",
+      "Business & Stakeholder Communication",
       "Problem Solving",
       "Clear Communication",
       "Team Collaboration",
@@ -221,13 +226,7 @@ I work closely with Project Management Consulting (PMC), Construction Management
       link: "/Bursa Investment Quiz 2023.pdf",
       image: "/Bursa Investment Quiz 2023.jpg",
     },
-    {
-      name: "New Certificate (Placeholder)",
-      issuer: "Issuer Name",
-      year: "2026",
-      link: "",
-      image: "",
-    }
+
   ],
   achievements: [
     {

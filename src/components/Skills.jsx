@@ -24,11 +24,11 @@ const Skills = () => {
     <div>
       <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Technical Skills</h2>
       <div className="flex flex-wrap justify-center gap-6 mb-16">
+        <SkillCategory title="Data Integration" items={skills.data} />
         <SkillCategory title="Programming" items={skills.programming} />
         <SkillCategory title="Machine Learning" items={skills.ml} />
-        <SkillCategory title="Data Integration" items={skills.data} />
-        <SkillCategory title="Web Development" items={skills.web} />
         <SkillCategory title="Tools & Platforms" items={skills.tools} />
+        <SkillCategory title="Specialized Focus" items={skills.specialized} />
       </div>
 
       <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Soft Skills</h2>
