@@ -47,7 +47,7 @@ const Hero = () => {
 
           <div className="flex items-center gap-3 mt-2 px-4 py-3 bg-slate-900/60 backdrop-blur-sm rounded-xl border border-sky-500/30 w-full md:w-fit shadow-lg">
             <Briefcase className="text-sky-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl text-white font-semibold tracking-wide leading-snug">{hero.tagline3}</span>
+            <span className="text-lg md:text-xl text-sky-600 font-semibold tracking-wide leading-snug">{hero.tagline3}</span>
           </div>
 
           <div className="flex items-center gap-3 text-white mt-2">
