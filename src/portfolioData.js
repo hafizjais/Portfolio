@@ -4,7 +4,7 @@ export const portfolioData = {
     headline: "Mohamad Hafiz Bin Mohd Jais",
     tagline: "International Islamic University of Malaysia (IIUM Gombak)",
     tagline2: "Bachelor of Computer Science (Honours)",
-    tagline3: "Data Analytics Intern (Autodesk Construction Cloud) at JLand Group Sdn Bhd",
+    tagline3: "Data Analytics Intern at JLand Group Sdn Bhd",
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
