@@ -8,8 +8,8 @@ export const portfolioData = {
     summary: "I turn project and business data into clear Power BI reports. Most recently I spent six months at JLand Group preparing construction cost data from Autodesk Construction Cloud and building dashboards for cost trends, variation orders and cashflow.",
     // Three credentials shown under the hero. Each is a real fact, not a metric.
     highlights: [
-      { label: "Most recent analyst role", value: "Data Analyst Intern, JLand Group", detail: "Mar – Sep 2026" },
       { label: "Degree", value: "BCS (Hons), Data Science & Computer Intelligence", detail: "IIUM" },
+      { label: "Most recent analyst role", value: "Data Analyst Intern, JLand Group", detail: "Mar – Sep 2026" },
       { label: "Current work", value: "Freelance Web Developer, CanvasKita", detail: "My personal brand:", link: { label: "canvaskita.com", url: "https://canvaskita.com" } },
     ],
     location: "Johor Bahru, Malaysia",
@@ -117,6 +117,7 @@ I'm now looking for Data Analyst or Business Analyst roles. Alongside my job sea
     {
       type: "freelance",
       role: "Small Business Setup Consultant",
+      date: "Nov 2026 - Present",
       description: [
         "Help small businesses understand and complete the registrations they need, including SSM, FoSIM with the Ministry of Health, LHDN online stamping, Ministry of Finance certification for businesses interested in government tenders, and local council (PBT) business licences.",
         "Guide clients through each application based on their business needs.",
