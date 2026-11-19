@@ -1,48 +1,48 @@
 import React from 'react';
 import { portfolioData } from '../portfolioData';
+import Section from './Section';
+
+const groups = [
+  { key: 'analysis', label: 'Analysis and reporting' },
+  { key: 'data', label: 'Data integration' },
+  { key: 'programming', label: 'Programming' },
+  { key: 'tools', label: 'Tools and platforms' },
+  { key: 'automationWeb', label: 'Automation and web' },
+  { key: 'ml', label: 'Machine learning' },
+  { key: 'specialized', label: 'Domain knowledge' },
+];
 
 const Skills = () => {
   const { skills } = portfolioData;
 
-  const SkillCategory = ({ title, items }) => (
-    <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700 hover:border-sky-500/50 transition-colors w-full md:w-[calc(50%-12px)] lg:w-[calc(33.3333%-16px)]">
-      <h3 className="text-xl font-bold text-sky-400 mb-4">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {items.map((skill) => (
-          <span
-            key={skill}
-            className="px-3 py-1 bg-slate-900 text-slate-300 text-sm rounded-full border border-slate-700"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-
   return (
-    <div>
-      <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Technical Skills</h2>
-      <div className="flex flex-wrap justify-center gap-6 mb-16">
-        <SkillCategory title="Data Integration" items={skills.data} />
-        <SkillCategory title="Programming" items={skills.programming} />
-        <SkillCategory title="Machine Learning" items={skills.ml} />
-        <SkillCategory title="Tools & Platforms" items={skills.tools} />
-        <SkillCategory title="Specialized Focus" items={skills.specialized} />
-      </div>
+    <Section id="skills" title="Skills">
+      <dl className="divide-y divide-line border-y border-line">
+        {groups
+          .filter(({ key }) => skills[key]?.length)
+          .map(({ key, label }) => (
+            <div key={key} className="grid gap-3 py-6 sm:grid-cols-[12rem_1fr] sm:gap-8">
+              <dt className="font-semibold text-ink">{label}</dt>
+              <dd>
+                <ul className="flex flex-wrap gap-2">
+                  {skills[key].map((skill) => (
+                    <li key={skill} className="rounded-md border border-line bg-surface px-2.5 py-1 text-[0.9375rem] text-ink">
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
+            </div>
+          ))}
 
-      <h2 className="text-3xl font-bold text-slate-100 mb-12 text-center">Soft Skills</h2>
-      <div className="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
-        {skills.soft?.map((skill) => (
-          <span
-            key={skill}
-            className="px-6 py-3 bg-slate-800/50 text-slate-300 text-lg md:text-xl rounded-full border border-slate-700 hover:border-amber-500/50 hover:text-amber-400 transition-colors cursor-default"
-          >
-            {skill}
-          </span>
-        ))}
-      </div>
-    </div>
+        {skills.soft?.length > 0 && (
+          <div className="grid gap-3 py-6 sm:grid-cols-[12rem_1fr] sm:gap-8">
+            <dt className="font-semibold text-ink">Working style</dt>
+            <dd className="max-w-prose leading-relaxed text-muted">{skills.soft.join(', ')}.</dd>
+          </div>
+        )}
+      </dl>
+    </Section>
   );
 };
 

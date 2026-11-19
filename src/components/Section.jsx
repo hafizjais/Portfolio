@@ -1,55 +1,45 @@
-import { motion } from 'framer-motion';
+import React from 'react';
 
-const Section = ({
-    children,
-    id,
-    variant = 'light', // 'light' | 'dark'
-    className = '',
-    bgImage = null,
-    bgOverlayOpacity = 0.7 // Default overlay opacity
-}) => {
-    // dark = slate-950, light = slate-900 (slightly lighter) for contrast
-    const bgClass = variant === 'dark' ? 'bg-slate-950' : 'bg-slate-900';
+/**
+ * Report-style section.
+ * - layout="split": section title sits in a left margin column (sticky on desktop), content on the right.
+ * - layout="stack": title above full-width content (pass `actions` for controls on the right).
+ */
+const Section = ({ id, title, intro, tone = 'paper', layout = 'split', actions, children }) => {
+  const toneClass = tone === 'mist' ? 'bg-mist' : 'bg-paper';
+  const titleId = `${id}-title`;
 
-    return (
-        <section
-            id={id}
-            className={`relative w-full py-20 px-6 md:px-12 lg:px-24 overflow-hidden ${!bgImage ? bgClass : 'bg-slate-950'} ${className}`}
-        >
-            {bgImage && (
-                <>
-                    {/* Background Image with requested filters (Saturation, Contrast) */}
-                    <div
-                        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat saturate-[1.2] contrast-[1.1]"
-                        style={{ backgroundImage: `url('${bgImage}')` }}
-                    ></div>
+  const heading = (
+    <>
+      <h2 id={titleId} className="text-[1.75rem] md:text-[2rem] font-bold tracking-[-0.02em] leading-tight text-ink">
+        {title}
+      </h2>
+      {intro && <p className="mt-3 text-base leading-relaxed text-muted max-w-prose">{intro}</p>}
+    </>
+  );
 
-                    {/* Dark Overlay for Text Readability (Transparency adjustment) */}
-                    <div
-                        className="absolute inset-0 z-0 bg-slate-950"
-                        style={{ opacity: bgOverlayOpacity }}
-                    ></div>
-                </>
-            )}
-
-            {/* Background elements (only if no image, to avoid clutter) */}
-            {!bgImage && (
-                <div className="absolute inset-0 z-0 pointer-events-none opacity-50">
-                    {/* Existing subtle patterns can go here if needed */}
-                </div>
-            )}
-
-            <motion.div 
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-10%" }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                className="relative max-w-7xl mx-auto z-10 text-slate-300"
-            >
-                {children}
-            </motion.div>
-        </section>
-    );
+  return (
+    <section id={id} aria-labelledby={titleId} className={`${toneClass} border-t border-line`}>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+        {layout === 'split' ? (
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+            <header className="lg:col-span-3">
+              <div className="lg:sticky lg:top-28">{heading}</div>
+            </header>
+            <div className="lg:col-span-9 min-w-0">{children}</div>
+          </div>
+        ) : (
+          <>
+            <header className="mb-10 flex flex-wrap items-end justify-between gap-4">
+              <div>{heading}</div>
+              {actions}
+            </header>
+            {children}
+          </>
+        )}
+      </div>
+    </section>
+  );
 };
 
 export default Section;

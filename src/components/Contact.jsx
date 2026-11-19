@@ -1,65 +1,63 @@
 import React from 'react';
+import { Mail, Linkedin, Github, Facebook, ArrowUpRight } from 'lucide-react';
 import { portfolioData } from '../portfolioData';
-import { Mail, MapPin, Github } from 'lucide-react';
+import Section from './Section';
 
 const Contact = () => {
   const { contact } = portfolioData;
 
-  return (
-    <div className="text-center max-w-2xl mx-auto">
-      <h2 className="text-3xl font-bold text-slate-100 mb-8">Let's Connect</h2>
-      <p className="text-slate-400 mb-12 text-lg">
-        I'm currently looking for internship opportunities in Data Science, AI, and Data Analytics.
-        Feel free to reach out!
-      </p>
+  const profiles = [
+    { label: 'LinkedIn', href: contact.linkedin, icon: <Linkedin size={18} aria-hidden="true" /> },
+    { label: 'GitHub', href: contact.github, icon: <Github size={18} aria-hidden="true" /> },
+    { label: 'Facebook', href: contact.facebook, icon: <Facebook size={18} aria-hidden="true" /> },
+  ].filter((p) => p.href);
 
-      <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+  return (
+    <>
+      <Section id="contact" title="Contact">
+        <p className="max-w-[20ch] text-[clamp(1.75rem,4vw,2.5rem)] font-bold leading-[1.1] tracking-[-0.03em] text-ink">
+          Open to Data Analyst and Business Analyst roles.
+        </p>
+        <p className="mt-5 max-w-prose text-lg leading-relaxed text-muted">
+          Email is the quickest way to reach me. I'm based in {contact.location}.
+        </p>
+
         <a
           href={`mailto:${contact.email}`}
-          className="flex items-center gap-3 px-8 py-4 bg-sky-500 text-white font-bold rounded-lg hover:bg-sky-600 transition-all hover:-translate-y-1 w-full md:w-auto justify-center"
+          className="mt-9 inline-flex min-h-12 items-center gap-3 rounded-lg bg-clay px-6 text-lg font-semibold text-white transition-colors hover:bg-clay-dark"
         >
-          <Mail size={20} />
-          Send Email
+          <Mail size={20} aria-hidden="true" />
+          {contact.email}
         </a>
 
-        <div className="flex gap-4">
-          <a
-            href={contact.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-sky-500 hover:-translate-y-1 transition-all overflow-hidden p-2"
-          >
-            <img src="/linkedin icon.png" alt="LinkedIn" className="w-full h-full object-contain" />
-          </a>
+        <ul className="mt-10 flex flex-wrap gap-x-8 gap-y-3">
+          {profiles.map(({ label, href, icon }) => (
+            <li key={label}>
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-11 items-center gap-2 font-semibold text-ink underline decoration-line decoration-2 underline-offset-4 hover:decoration-clay"
+              >
+                {icon}
+                {label}
+                <ArrowUpRight size={15} aria-hidden="true" />
+                <span className="sr-only">(opens in a new tab)</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </Section>
 
-          <a
-            href={contact.facebook}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-blue-500 hover:-translate-y-1 transition-all overflow-hidden p-2"
-          >
-            <img src="/facebook icon.png" alt="Facebook" className="w-full h-full object-contain" />
-          </a>
-
-          <a
-            href={contact.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-14 h-14 bg-slate-800 rounded-full border border-slate-700 hover:border-slate-400 hover:text-white text-slate-300 hover:-translate-y-1 transition-all overflow-hidden p-3"
-          >
-            <Github className="w-full h-full" />
+      <footer className="border-t border-line bg-paper">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 sm:px-6 lg:px-8 py-8 text-sm text-muted">
+          <p>&copy; {new Date().getFullYear()} Mohamad Hafiz Bin Mohd Jais</p>
+          <a href="#top" className="inline-flex min-h-10 items-center hover:text-ink">
+            Back to top
           </a>
         </div>
-      </div>
-
-      <div className="mt-16 pt-8 border-t border-slate-800 text-slate-500 text-sm flex flex-col items-center gap-2">
-        <div className="flex items-center gap-2">
-          <MapPin size={16} />
-          {contact.location}
-        </div>
-        <p>&copy; {new Date().getFullYear()} Mohamad Hafiz. Built with React & Tailwind.</p>
-      </div>
-    </div>
+      </footer>
+    </>
   );
 };
 

@@ -1,106 +1,127 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MapPin } from 'lucide-react';
 import { portfolioData } from '../portfolioData';
-import { GraduationCap, Award, BookOpen, Briefcase, MapPin } from 'lucide-react';
+
+// The page's one orchestrated motion moment: a short staggered entrance on load.
+const enter = (i) => ({
+  initial: { opacity: 0, y: 12 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.5, delay: 0.08 * i, ease: [0.22, 1, 0.36, 1] },
+});
 
 const Hero = () => {
   const { hero } = portfolioData;
 
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-between min-h-[70vh] px-6 md:px-0 gap-8 md:gap-12">
+    <section id="top" aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-paper">
+      {/* Decorative background, hero only. Overlays keep text contrast at AA or better. */}
+      <img
+        src="/hero-mountain.jpg"
+        alt=""
+        aria-hidden="true"
+        width="2000"
+        height="1333"
+        fetchPriority="high"
+        className="absolute inset-0 -z-20 h-full w-full object-cover object-[50%_30%] saturate-[1.1]"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-paper/85 via-paper/65 to-paper/30 max-lg:bg-paper/70 max-lg:bg-none"
+      ></div>
+      <div
+        aria-hidden="true"
+        className="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-b from-transparent to-paper"
+      ></div>
 
-      {/* Text Content */}
-      <div className="flex-1 flex flex-col items-start text-left">
-        <motion.span
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="text-sky-400 font-medium tracking-wider mb-2 block text-2xl pt-2"
-        >
-          Hello, I'm
-        </motion.span>
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 pt-28 md:pt-36 pb-14 md:pb-20">
+        <div className="grid items-end gap-10 lg:grid-cols-12 lg:gap-12">
+          <div className="lg:col-span-8">
+            <motion.p {...enter(0)} className="flex items-center gap-2.5 text-[0.9375rem] font-medium text-ink">
+              <span className="h-2.5 w-2.5 rounded-full bg-signal" aria-hidden="true"></span>
+              {hero.tagline3}
+            </motion.p>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-          className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-100 mb-4 leading-tight"
-        >
-          {hero.headline}
-        </motion.h1>
+            <motion.h1
+              {...enter(1)}
+              id="hero-title"
+              className="mt-6 text-[clamp(2.75rem,8vw,5.75rem)] font-extrabold leading-[0.95] tracking-[-0.04em] text-ink"
+            >
+              Mohamad Hafiz
+              <br />
+              Bin Mohd Jais
+            </motion.h1>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="flex flex-col gap-4 mb-10"
-        >
-          <div className="flex items-center gap-3 text-white">
-            <GraduationCap className="text-amber-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl font-medium">{hero.tagline}</span>
+            <motion.p {...enter(2)} className="mt-7 max-w-[52ch] text-lg md:text-xl leading-relaxed text-ink-soft">
+              {hero.summary}
+            </motion.p>
+
+            <motion.div {...enter(3)} className="mt-9 flex flex-wrap items-center gap-3">
+              <a
+                href="/Resume_Hafiz.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex min-h-12 items-center rounded-lg bg-clay px-6 font-semibold text-white transition-colors hover:bg-clay-dark"
+              >
+                My Resume
+              </a>
+              <a
+                href={`mailto:${hero.email}`}
+                className="inline-flex min-h-12 items-center rounded-lg border border-ink/25 px-6 font-semibold text-ink transition-colors hover:border-ink hover:bg-surface"
+              >
+                Email me
+              </a>
+              <span className="ml-1 inline-flex items-center gap-1.5 text-[0.9375rem] text-ink-soft">
+                <MapPin size={16} aria-hidden="true" />
+                {hero.location}
+              </span>
+            </motion.div>
           </div>
 
-          <div className="flex items-center gap-3 text-white">
-            <Award className="text-amber-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl font-medium">{hero.tagline2}</span>
-          </div>
-
-          <div className="flex items-center gap-3 mt-2 px-4 py-3 bg-slate-900/60 backdrop-blur-sm rounded-xl border border-sky-500/30 w-full md:w-fit shadow-lg">
-            <Briefcase className="text-sky-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl text-sky-600 font-semibold tracking-wide leading-snug">{hero.tagline3}</span>
-          </div>
-
-          <div className="flex items-center gap-3 text-white mt-2">
-            <MapPin className="text-sky-400 shrink-0" size={24} />
-            <span className="text-lg md:text-xl font-medium">Based in {hero.location}</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-          className="flex flex-wrap gap-4 mb-8 md:mb-12"
-        >
-          <a
-            href="/CV_Hafiz.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-8 py-3 bg-sky-500 text-white font-medium rounded hover:bg-sky-600 transition-colors"
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+            className="order-first lg:order-last lg:col-span-4"
           >
-            View my CV
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-3 bg-sky-500 text-white font-medium rounded hover:bg-sky-600 transition-colors"
-          >
-            Contact Me
-          </a>
-        </motion.div>
-      </div>
-
-      {/* Image Content */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.4 }}
-        className="flex-1 flex justify-center md:justify-end mb-8 md:mb-0"
-      >
-        <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-96 lg:h-96">
-          {/* Decorative Ring */}
-          <div className="absolute inset-0 border-2 border-dashed border-sky-500/30 rounded-full animate-[spin_10s_linear_infinite]"></div>
-
-          <div className="absolute inset-4 rounded-full overflow-hidden border-4 border-slate-800 bg-slate-900 shadow-2xl">
             <img
               src="/Gambar Profile.JPG"
-              alt={hero.name}
-              className="w-full h-full object-cover object-center"
+              alt={`Portrait of ${hero.name}`}
+              width="1227"
+              height="1280"
+              fetchPriority="high"
+              className="h-28 w-28 sm:h-36 sm:w-36 lg:h-auto lg:w-full lg:aspect-[4/5] rounded-xl lg:rounded-2xl object-cover object-[50%_20%] ring-1 ring-line"
             />
-          </div>
+          </motion.div>
         </div>
-      </motion.div>
 
-    </div>
+        <dl className="mt-14 md:mt-20 grid gap-6 border-t border-line pt-8 sm:grid-cols-3 sm:gap-8">
+          {hero.highlights.map((item) => (
+            <div key={item.label}>
+              <dt className="text-sm text-ink-soft">{item.label}</dt>
+              <dd className="mt-1.5 font-semibold leading-snug text-ink">{item.value}</dd>
+              <dd className={`mt-0.5 text-sm text-ink-soft ${item.link ? '' : 'tabular'}`}>
+                {item.detail}
+                {item.link && (
+                  <>
+                    {' '}
+                    <a
+                      href={item.link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-semibold text-ink underline decoration-ink/30 decoration-2 underline-offset-4 hover:decoration-clay"
+                    >
+                      {item.link.label}
+                      <span className="sr-only"> (opens in a new tab)</span>
+                    </a>
+                  </>
+                )}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </section>
   );
 };
 

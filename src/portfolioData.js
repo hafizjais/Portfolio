@@ -2,23 +2,33 @@ export const portfolioData = {
   hero: {
     name: "Mohamad Hafiz Bin Mohd Jais",
     headline: "Mohamad Hafiz Bin Mohd Jais",
-    tagline: "International Islamic University of Malaysia (IIUM Gombak)",
+    tagline: "International Islamic University Malaysia (IIUM Gombak)",
     tagline2: "Bachelor of Computer Science (Honours)",
-    tagline3: "Data Analytics Intern at JLand Group Sdn Bhd",
+    tagline3: "Open to Data Analyst & Business Analyst roles",
+    summary: "I turn project and business data into clear Power BI reports. Most recently I spent six months at JLand Group preparing construction cost data from Autodesk Construction Cloud and building dashboards for cost trends, variation orders and cashflow.",
+    // Three credentials shown under the hero. Each is a real fact, not a metric.
+    highlights: [
+      { label: "Most recent analyst role", value: "Data Analyst Intern, JLand Group", detail: "Mar – Sep 2026" },
+      { label: "Degree", value: "BCS (Hons), Data Science & Computer Intelligence", detail: "IIUM" },
+      { label: "Current work", value: "Freelance Web Developer, CanvasKita", detail: "My personal brand:", link: { label: "canvaskita.com", url: "https://canvaskita.com" } },
+    ],
     location: "Johor Bahru, Malaysia",
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
     github: "https://github.com/hafizjais",
   },
   about: {
-    bio: `As a Data Analytics Intern at Johor Corporation, I support the PDP-HPM project in improving cost transparency, decision‑making and data integration across the construction project lifecycle. My role focuses on bridging project operations, cost management workflows and analytics, using Autodesk Construction Cloud (ACC) and Power BI as core platforms.
+    bio: `I recently completed my Data Analyst internship at JLand Group Sdn. Bhd., where I supported the PDP-HPM project in improving cost transparency, decision‑making and data integration across the construction project lifecycle. I prepared and analyzed project cost data from Autodesk Construction Cloud (ACC) and built Power BI dashboards for cost trends, variation order exposure and cashflow.
 
-I work closely with Project Management Consulting (PMC), Construction Management and Finance, gaining hands‑on exposure to how real project cost data is structured, governed and used for reporting and forecasting.`,
+Working alongside Project Management Consulting (PMC), Construction Management and Finance gave me hands‑on exposure to how real project cost data is structured, governed and used for reporting and forecasting.
+
+I'm now looking for Data Analyst or Business Analyst roles. Alongside my job search, I build business websites under my own brand, CanvasKita, and support rental operations as a part-time IT administrator.`,
     education: [
       {
         degree: "Bachelor of Computer Science (Honours), Data Science and Computer Intelligence",
         institution: "International Islamic University Malaysia (IIUM)",
         year: "2022 - 2026",
+        notes: ["Dean's List (5 of 8 semesters)", "Co-Curricular Cumulative Average 4.0/4.0"],
       },
       {
         degree: "Foundation in Engineering and Computer Science",
@@ -32,40 +42,101 @@ I work closely with Project Management Consulting (PMC), Construction Management
       }
     ],
   },
+  // type: "professional" | "freelance" | "earlier" — controls grouping in the Experience section
   experience: [
     {
+      type: "professional",
+      role: "Part-Time IT Administrator",
+      company: "Haven Space Property",
+      date: "Sep 2026 - Nov 2026",
+      description: [
+        "Track monthly rental collections and tenant payments.",
+        "Create an admin portal to track profit and loss, tenant payments and rental agreements, along with a public website listing available properties and rooms.",
+      ],
+    },
+    {
+      type: "professional",
+      role: "Data Analyst Intern",
+      company: "JLand Group Sdn. Bhd.",
+      date: "Mar - Sep 2026",
+      description: [
+        "Supported the PDP-HPM project using cost data from Autodesk Construction Cloud (ACC).",
+        "Prepared and analyzed project cost data for reporting.",
+        "Built Power BI dashboards showing cost trends, variation order exposure and cashflow.",
+        "Automated workflows with Microsoft Power Automate and worked with Microsoft Fabric for data integration.",
+      ],
+      links: [
+        { label: "View My Internship Summary", url: "https://drive.google.com/file/d/1QKeg1Ttr44hqyOaX9WLmKBxRBR_GL-XX/view?usp=sharing" },
+        { label: "View My Internship Projects", url: "https://drive.google.com/file/d/1onVKCBw4tzW9CYH1yUdNE4rfQ3f_sFmd/view?usp=sharing" },
+      ],
+    },
+    {
+      type: "professional",
       role: "Digital & Technical Assistant",
       company: "Magna IBN Sdn. Bhd.",
       date: "Aug 2025 - Jan 2026",
       description: [
-        "Managed WordPress website and improved client engagement.",
-        "Managed Facebook and WhatsApp campaigns.",
-        "Consulted clients regarding Halal certification services.",
-        "Improved digital communication and documentation processes."
+        "Managed Meta/Facebook advertising with AI-assisted optimization, with a reported increase of at least 40% in daily traffic and leads compared with normal settings.",
+        "Built n8n workflows connected to the Muse AI agent from Meta to manage client responses and capture leads from WhatsApp integrated with Meta/Facebook.",
+        "Supported clients with Halal consultancy and training services.",
+        "Maintained WordPress websites and improved digital communication and documentation processes.",
       ],
     },
     {
-      role: "Research Assistant - Under Dr Norzariyah Yahya",
+      type: "professional",
+      role: "Research Assistant - Under Dr. Norzariyah Binti Yahya",
       company: "International Islamic University Malaysia (IIUM)",
       date: "Aug - Dec 2025",
       description: [
-        "Conducted structured literature review on AI + Blockchain integration.",
-        "Extracted and categorized research data from Scopus, IEEE, ScienceDirect.",
+        "Conducted literature searches and extracted research data from Scopus, IEEE and ScienceDirect for a structured review of AI-blockchain frameworks in Halal supply chain compliance.",
       ],
     },
     {
+      type: "freelance",
+      role: "Freelance Web Developer",
+      company: "CanvasKita",
+      companyLink: "https://canvaskita.com",
+      date: "Sep 2026 - Present",
+      description: [
+        "Run CanvasKita.com, my personal brand for website design and development services.",
+        "Developed and maintained business websites for nine clients, using headless WordPress with Next.js, as well as WordPress sites and coded applications hosted on Hostinger.",
+        "For a property client, connected Airtable property records to the website through an API so submitted property details appear as live listings.",
+        "Use AI-agent workflows to support parts of the website build and maintenance process.",
+      ],
+    },
+    {
+      type: "freelance",
+      role: "Mortgage & Debt Consolidation Consultant",
+      company: "Victory Vision (Financial Hafiz)",
+      companyLink: "https://financialhafiz.vercel.app/",
+      date: "Sep 2026 - Present",
+      description: [
+        "Work with property agents and liaise with bankers to help clients with mortgage, housing loan and debt consolidation applications.",
+      ],
+    },
+    {
+      type: "freelance",
+      role: "Small Business Setup Consultant",
+      description: [
+        "Help small businesses understand and complete the registrations they need, including SSM, FoSIM with the Ministry of Health, LHDN online stamping, Ministry of Finance certification for businesses interested in government tenders, and local council (PBT) business licences.",
+        "Guide clients through each application based on their business needs.",
+      ],
+    },
+    {
+      type: "earlier",
+      role: "Cashier",
+      company: "N24 Cafe (UTM) & Pasar Awam Taman Universiti",
+      date: "Sep - Oct 2024",
+      description: [
+        "Handled daily cash transactions and monitored inventory records.",
+      ],
+    },
+    {
+      type: "earlier",
       role: "Private SPM Tutor",
       date: "Feb - May 2022",
       description: [
-        "Conducted one-on-one tutoring for SPM students in Bahasa Arab, Mathematics, and Sejarah",
-      ],
-    },
-    {
-      role: "Cashier",
-      company: "N24 Cafe (UTM) & Pasar Awam Taman Universiti",
-      date: "September -October 2024",
-      description: [
-        "Handled daily cash transactions and monitored inventory records",
+        "Conducted one-on-one tutoring for SPM students in Bahasa Arab, Mathematics, and Sejarah.",
       ],
     },
   ],
@@ -126,32 +197,52 @@ I work closely with Project Management Consulting (PMC), Construction Management
       ]
     }
   ],
+  // category: "professional" | "academic" — controls grouping in the Projects section
   projects: [
     {
-      title: "DIAGNOCHAIN: AI-Powered Disease Prediction System",
+      category: "professional",
+      title: "Cost Management Analysis",
+      subtitle: "Internship Project · JLand Group Sdn. Bhd.",
+      description: "Analyzed Autodesk Construction Cloud cost data for the PDP-HPM project. Prepared datasets and built Power BI dashboards covering cost trends, variation order exposure and cashflow, supporting descriptive, predictive and prescriptive views.",
+      tech: ["Autodesk Construction Cloud", "Power BI", "Data Preparation"],
+    },
+    {
+      category: "academic",
+      title: "DIAGNOCHAIN: AI-Powered Disease Prediction System on a Blockchain-Based Medical Database",
       subtitle: "Final Year Project",
-      description: "Developed supervised machine learning model for disease classification and integrated AI prediction system with blockchain-based secure medical database.",
-      tech: ["Python", "Scikit-learn", "Firebase", "ReactJS", "Solidity"],
+      description: "Combined AI-driven disease prediction with blockchain-based data management. Developed a supervised machine learning model for disease classification and integrated it with a secure blockchain-based medical database.",
+      tech: ["Python", "Scikit-learn", "Firebase", "ReactJS", "Solidity", "Hardhat"],
       award: "Silver Award at IIIDeation 2026",
     },
     {
-      title: "Revenue Optimization & Customer Experience Analytics",
+      category: "academic",
+      title: "Optimizing Revenue and Customer Experience using Causal Inference & Machine Learning",
       subtitle: "Big Data and Analytics Project",
-      description: "Analyzed large customer datasets using SQL, Spark, Excel, and Python. Performed exclusionary data analysis, identified customer behavior patterns, and built interactive Power BI dashboards to visualize KPIs.",
-      tech: ["SQL", "Spark", "Excel", "Python", "Power BI"],
+      description: "Analyzed customer datasets using Excel, SQL, Spark and Python, applying exploratory data analysis to identify customer behavior patterns. Built interactive Power BI dashboards and reports on shopping trends, customer satisfaction and KPIs.",
+      tech: ["Excel", "SQL", "Spark", "Python", "Power BI"],
     },
     {
-      title: "Food Ingredient Classification (Halal Compliance)",
+      category: "academic",
+      title: "Classifying Food Ingredients Based on Halal Compliance",
       subtitle: "Data Science Project",
-      description: "Conducted data preprocessing and feature engineering. Built supervised ML model to classify halal compliance and visualized findings using PowerPoint and Python.",
-      tech: ["Python", "Machine Learning", "Data Preprocessing"],
+      description: "Prepared and analyzed ingredient data using Excel and Python, performed feature engineering, created visualizations, and developed a supervised machine learning model to classify Halal compliance.",
+      tech: ["Excel", "Python", "Machine Learning", "Data Preprocessing"],
     },
   ],
   skills: {
-    data: ["Excel", "Power BI", "Data Silo Remediation", "Power Query", "EdgeProp"],
-    programming: ["DAX Measures for Power BI", "SQL", "Python", "ReactJS"],
-    ml: ["Predictive Analytics for Power BI", "Scikit-learn", "TensorFlow", "PyTorch"],
-    tools: ["Autodesk Construction Cloud", "Autodesk Forma", "Microsoft Power BI", "Microsoft Fabric", "Microsoft Dynamic 365", "Microsoft Sharepoint", "Git", "VS Code"],
+    analysis: [
+      "Data Collection",
+      "Data Cleaning & Preparation",
+      "Data Quality & Standardization",
+      "KPI Reporting",
+      "Dashboard Development",
+      "Data Visualization",
+    ],
+    data: ["Excel", "Power BI", "Power Query", "Data Silo Remediation", "EdgeProp"],
+    programming: ["DAX Measures for Power BI", "SQL", "Python", "Spark", "ReactJS"],
+    ml: ["Predictive Analytics for Power BI", "Scikit-learn"],
+    tools: ["Autodesk Construction Cloud", "Autodesk Forma", "Microsoft Power BI", "Microsoft Fabric", "Microsoft Power Automate", "Microsoft Dynamics 365", "Microsoft SharePoint", "Git", "VS Code"],
+    automationWeb: ["n8n", "Supabase", "Airtable API", "WordPress", "Headless WordPress", "Next.js"],
     specialized: [
       "Construction & Project Cost Management Fundamentals",
       "Cost Data Structure & Governance",
@@ -200,15 +291,15 @@ I work closely with Project Management Consulting (PMC), Construction Management
     },
     {
       name: "Oracle Java Fundamentals",
-      issuer: "Oracle",
-      year: "2024",
+      issuer: "Oracle Academy",
+      year: "2023",
       link: "/clmsCertificate.pdf",
       image: "/clmsCertificate.jpg",
     },
     {
-      name: "AI for Business",
+      name: "AI for Business (eUM10)",
       issuer: "MDEC",
-      year: "2025",
+      year: "2024",
       link: "/Certificate MDEC.pdf",
       image: "/Certificate MDEC.jpg",
     },
@@ -226,26 +317,25 @@ I work closely with Project Management Consulting (PMC), Construction Management
       link: "/Bursa Investment Quiz 2023.pdf",
       image: "/Bursa Investment Quiz 2023.jpg",
     },
-
   ],
   achievements: [
     {
       title: "Silver Award",
-      award: "IIIDeation 2026 International Innovation Expo",
+      award: "IIIDeation 2026 International Grand Invention, Innovation & Design Expo",
       year: "2026",
       images: ["/FYP 2 poster.png", "/FYP Judges Evaluation.jpg", "/FYP Booth.jpg"],
       link: "/IGIIDEATION Silver Award.pdf",
     },
     {
       title: "Dean’s List",
-      award: "Awarded for 3 Semesters",
-      year: "2024-2025",
-      images: ["/Dean list award 3.jpg", "/Dean list award 2.jpg", "/Dean list award 1.jpg"],
+      award: "Awarded for 5 of 8 Semesters",
+      year: "",
+      images: ["/Dean list profile.jpg", "/Dean list award 3.jpg", "/Dean list award 2.jpg", "/Dean list award 1.jpg"],
       link: "/Dean list award 3.pdf",
     },
     {
       title: "Bronze Award",
-      award: "University in Action Symposium",
+      award: "7th University in Action Symposium",
       year: "2025",
       images: ["/Poster Symposium.png", "/UIA Booth Visit.jpg", "/Silver Award - UIA Symposium.jpg"],
       link: "/University in Action - Symposium.pdf"
@@ -255,7 +345,7 @@ I work closely with Project Management Consulting (PMC), Construction Management
     email: "hafizjais5@gmail.com",
     linkedin: "https://linkedin.com/in/hafiz-jais-306132213",
     facebook: "https://www.facebook.com/peacejez/",
-    github: "https://github.com/peacejez",
+    github: "https://github.com/hafizjais",
     location: "Johor, Malaysia",
   },
 };

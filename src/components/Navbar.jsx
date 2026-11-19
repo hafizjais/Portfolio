@@ -1,92 +1,142 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+
+const navLinks = [
+  { name: 'About', id: 'about' },
+  { name: 'Experience', id: 'experience' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Certifications', id: 'certifications' },
+  { name: 'Awards', id: 'awards' },
+  { name: 'Leadership', id: 'leadership' },
+  { name: 'Contact', id: 'contact' },
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [active, setActive] = useState('');
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Leadership', href: '#leadership' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Awards', href: '#awards' },
-    { name: 'Certifications', href: '#certifications' },
-    { name: 'Contact', href: '#contact' },
-  ];
+  // Highlight the section currently in the middle band of the viewport.
+  useEffect(() => {
+    const sections = navLinks.map((l) => document.getElementById(l.id)).filter(Boolean);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setActive(entry.target.id);
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px' }
+    );
+    sections.forEach((s) => observer.observe(s));
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onKey = (e) => e.key === 'Escape' && setIsOpen(false);
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [isOpen]);
+
+  const solid = scrolled || isOpen;
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'bg-slate-900/90 backdrop-blur-md border-b border-slate-700 py-4 shadow-lg'
-        : 'bg-transparent py-6'
-        }`}
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-200 ${
+        solid ? 'bg-paper/95 backdrop-blur border-b border-line' : 'bg-transparent border-b border-transparent'
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="flex justify-between items-center">
+      <nav aria-label="Primary" className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <a href="#top" className="text-lg font-bold tracking-[-0.02em] text-ink">
+          Hafiz Jais
+        </a>
 
-          {/* Logo */}
-          <a href="#" className="font-heading text-2xl md:text-3xl font-bold text-slate-100 mb-4 leading-tight">
-            Hafiz<span className="text-sky-500">Jais</span>.
-          </a>
-
-          {/* Desktop Links */}
-          <div className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="font-body text-sm font-medium text-slate-300 hover:text-sky-400 uppercase tracking-widest transition-colors relative group"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-              </a>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} className="text-sky-500 hover:text-sky-400 transition-colors">
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-slate-900/95 backdrop-blur-xl border-b border-slate-700 md:hidden p-6"
+        <div className="hidden lg:flex items-center gap-7">
+          <ul className="flex items-center gap-6">
+            {navLinks.map((link) => {
+              const isActive = active === link.id;
+              return (
+                <li key={link.id}>
+                  <a
+                    href={`#${link.id}`}
+                    aria-current={isActive ? 'location' : undefined}
+                    className={`relative py-2 text-[0.9375rem] transition-colors ${
+                      isActive ? 'text-ink font-semibold' : 'text-muted hover:text-ink'
+                    }`}
+                  >
+                    {link.name}
+                    <span
+                      aria-hidden="true"
+                      className={`absolute inset-x-0 -bottom-0.5 h-0.5 rounded-full bg-clay transition-opacity ${
+                        isActive ? 'opacity-100' : 'opacity-0'
+                      }`}
+                    ></span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+          <a
+            href="/Resume_Hafiz.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-lg bg-ink px-4 py-2 text-sm font-semibold text-paper transition-colors hover:bg-ink-soft"
           >
-            <div className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+            My Resume
+          </a>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setIsOpen((o) => !o)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          className="lg:hidden -mr-2 flex h-11 w-11 items-center justify-center rounded-lg text-ink hover:bg-mist cursor-pointer"
+        >
+          {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
+        </button>
+      </nav>
+
+      {isOpen && (
+        <div id="mobile-menu" className="lg:hidden border-t border-line bg-paper">
+          <ul className="mx-auto max-w-6xl px-4 sm:px-6 py-3">
+            {navLinks.map((link) => (
+              <li key={link.id}>
                 <a
-                  key={link.name}
-                  href={link.href}
-                  className="font-heading text-xl text-slate-300 hover:text-sky-400 transition-colors"
+                  href={`#${link.id}`}
                   onClick={() => setIsOpen(false)}
+                  aria-current={active === link.id ? 'location' : undefined}
+                  className={`flex min-h-11 items-center text-lg ${
+                    active === link.id ? 'font-semibold text-ink' : 'text-muted'
+                  }`}
                 >
                   {link.name}
                 </a>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </nav>
+              </li>
+            ))}
+            <li className="pt-3 pb-2">
+              <a
+                href="/Resume_Hafiz.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center justify-center rounded-lg bg-ink px-4 font-semibold text-paper"
+              >
+                My Resume
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </header>
   );
 };
 

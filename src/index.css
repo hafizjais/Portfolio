@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  @apply bg-slate-950 text-slate-100;
-  /* Now controllable via tailwind.config.js */
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: 'kern', 'liga';
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    @apply bg-mist text-ink;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.clay.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  @apply bg-slate-950;
-}
-
-::-webkit-scrollbar-thumb {
-  @apply bg-slate-700;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  @apply bg-sky-500;
+@layer utilities {
+  .tabular {
+    font-variant-numeric: tabular-nums;
+  }
 }
